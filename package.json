@@ -4,7 +4,8 @@
   "description": "Este proyecto personal va a ser usado en mi ambito laboral para facilitar el labor del dia a dia, actualmente recibimos tareas con fecha, direccion y descripcion de la misma, sin tener un registro mas que un mensaje de wpp.",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "node server.js",
+    "dev": "nodemon server.js"
   },
   "repository": {
     "type": "git",
