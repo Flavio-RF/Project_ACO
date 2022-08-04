@@ -1,0 +1,33 @@
+{
+  "name": "proyect_aco",
+  "version": "1.0.0",
+  "description": "Este proyecto personal va a ser usado en mi ambito laboral para facilitar el labor del dia a dia, actualmente recibimos tareas con fecha, direccion y descripcion de la misma, sin tener un registro mas que un mensaje de wpp.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Flavio-RF/Proyect_ACO.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Flavio-RF/Proyect_ACO/issues"
+  },
+  "homepage": "https://github.com/Flavio-RF/Proyect_ACO#readme",
+  "dependencies": {
+    "bcryptjs": "^2.4.3",
+    "express": "^4.18.1",
+    "express-jwt": "^7.7.5",
+    "jsonwebtoken": "^8.5.1",
+    "mongoose": "^6.5.1",
+    "mongoose-beautiful-unique-validation": "^7.1.1",
+    "nunjucks": "^3.2.3"
+  },
+  "devDependencies": {
+    "dotenv": "^16.0.1",
+    "nodemon": "^2.0.19"
+  }
+}
