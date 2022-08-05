@@ -18,7 +18,7 @@ nunjucks.configure("views", {
 app.use(express.urlencoded({ extended: false }));
 app.use(express.json())
 app.use(express.static(path.join(__dirname, "public")))
-app.use(routes)
+routes(app)
 
 app.listen(PORT, () => {
     console.log(`Servidor corriendo en el puerto ${PORT}`)

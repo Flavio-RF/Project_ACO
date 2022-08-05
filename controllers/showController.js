@@ -5,4 +5,7 @@ module.exports= {
     showLogin: async (req, res) => {
         res.render("login")
     },
+    showJobs: async ( req, res) =>{
+        res.render("home")
+    }
 }

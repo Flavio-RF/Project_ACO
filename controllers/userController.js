@@ -19,7 +19,7 @@ module.exports = {
 
                 let token = jwt.sign({ sub: user._id }, process.env.JWT_SECRET)
 
-                return res.status(201).json({
+                return res.status(201).render("home", {
                     token,
                     user: {
                         email: user.email,
@@ -28,7 +28,7 @@ module.exports = {
                     },
                 });
             } else {
-                res.status(401).json({ error: "El email ya existe" })
+                res.status(401).redirect("back", { error: "El email ya existe" })
             }
 
         } catch (error) {
@@ -40,7 +40,6 @@ module.exports = {
                 })
                 console.log(error)
             }
-
         };
     },
     login: async (req, res) => {
@@ -57,7 +56,7 @@ module.exports = {
             let match = await user.comparePassword(password);
             const token = jwt.sign({ sub: user._id }, process.env.JWT_SECRET)
             if (match) {
-                res.status(200).json({
+                res.status(200).redirect("/home", {
                     token,
                     user: {
                         email: user.email,
@@ -66,7 +65,9 @@ module.exports = {
                     },
                 });
             } else {
-                res.status(401).json({ error: `No se encontro el email: ${email} o la contraseña es incorrecta.` })
+                res.status(401).redirect("back")
+                req.flash("error", "Lo sentimos, el correo ya existe en el sistema.");
+
             }
         } catch (error) {
             console.log(error);
