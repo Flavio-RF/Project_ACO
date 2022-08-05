@@ -17,12 +17,19 @@ const userSchema = new Schema(
             type: String,
             required: true,
         },
+        jobs: [
+            {
+                ref: "Jobs",
+                type: Schema.Types.ObjectId,
+            },
+        ],
     },
     {
         timestamps: true,
     }
 );
 
+userSchema.plugin(beautifyUnique)
 
 userSchema = model("User", userSchema);
 
