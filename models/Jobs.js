@@ -14,7 +14,7 @@ const jobsSchema = new Schema(
             required: true,
         },
 
-        adress: {
+        address: {
             type: String,
             required: true,
         },

@@ -15,7 +15,7 @@
                     <div class="card mt-4 bg-dark text-white">
                         <div class="card-header text-center">
                             <h1 class="h4 text-white">
-                                Account Login
+                                Account Register
                             </h1>
                         </div>
                         <img class="mx-auto d-block logo m-4" src="/img/logo.png" alt="Logo"/>
@@ -24,6 +24,10 @@
                                 <div class="mb-3">
                                     <label for="email">Email:</label>
                                     <input type="email" class="form-control" name="email" placeholder="Email" autofocus="autofocus"/>
+                                </div>
+                                <div class="mb-3">
+                                    <label for="username">Usuario:</label>
+                                    <input type="text" class="form-control" name="username" placeholder="Ingresa tu nombre" autofocus="autofocus"/>
                                 </div>
                                 <div class="mb-3">
                                     <label for="passsword">Contraseña:</label>
@@ -36,6 +40,10 @@
                                 </div>
                             </form>
                         </div>
+
+                        <p class="text-center">Don't Have an Account?
+                            <a href="/auth/signup" class="text-info">Register</a>
+                        </p>
                     </div>
                 </div>
             </div>
